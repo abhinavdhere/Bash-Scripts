@@ -1,0 +1,8 @@
+#!/bin/sh
+echo $1 > /home/abhinav/GoogleString
+python /home/abhinav/googleString.py
+var=$(cat /home/abhinav/temp)
+xdg-open http://www.google.co.in/search?q=$var
+rm /home/abhinav/temp
+rm /home/abhinav/GoogleString
+
