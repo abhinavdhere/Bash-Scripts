@@ -1,0 +1,4 @@
+#! /bin/sh
+echo "print ((9/10.0)*5)" > ./calc.py
+python ./calc.py
+rm ./calc.py 

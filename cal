@@ -1,4 +1,6 @@
 #! /bin/sh
+#creates a Python file calc.py
+#then same python code is used to perform a computation
 echo "print ((9/10.0)*5)" > ./calc.py
 python ./calc.py
 rm ./calc.py 
