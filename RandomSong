@@ -1,0 +1,13 @@
+#! /bin/sh
+#Selects and plays a random song
+#Takes songs folder location as input from a file ./in
+
+songPath=$(cat $1)				#get songs folder path
+ls "$songPath" > /home/abhinav/songList		#write list of songs to a file
+python ./songSel.py				#select & write a random song to ./temp
+song=$(cat /home/abhinav/temp)
+cd "$songPath"
+vlc "$song"					#play the song
+rm /home/abhinav/songList
+rm /home/abhinav/temp
+
