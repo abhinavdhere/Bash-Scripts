@@ -9,7 +9,8 @@ def getSongList():
 	inFile=open("/home/abhinav/songList",'r')
 	for line in inFile:
 		line=line[:-1]
-		songList.append(line)
+		if line[-3:]==".rm" or line[-3:]=="mp3":
+			songList.append(line)
 	return songList
 
 def selSong():
