@@ -1,0 +1,11 @@
+#! /bin/sh
+Dir=$(pwd)
+echo "[Desktop Entry]" > ./Share\ Trader
+cat<< EOT >> ./Share\ Trader
+Name= Share Trader 
+Exec= $Dir/ShareTrader
+Icon= $Dir/stock-exchange.jpg
+Terminal= true
+EOT
+mv ./Share\ Trader ./Share\ Trader.desktop
+chmod +x ./Share\ Trader.desktop
